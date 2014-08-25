@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.raz.pdb" android:versionCode="1" android:versionName="1.0" >
+    
+    <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="15"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    
+    <application android:icon="@drawable/pdbxplorer" android:label="@string/app_name" >
+        <activity android:name=".PdbSummaryActivity" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" /><activity android:name=".PdbXplorerActivity" android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+		<activity android:name="org.raz.pdb.graphics.MoleculeViewActivity" android:configChanges="orientation|keyboardHidden" 
+		    android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"/>
+		<activity android:name="org.raz.pdb.graphics.MyPreferenceActivity" android:screenOrientation="portrait" />
+        <activity android:name="org.raz.pdb.graphics.PDBSearcher" android:configChanges="orientation|keyboardHidden"/>
+        <activity android:name="org.raz.pdb.graphics.PubChemSearcher" android:configChanges="orientation|keyboardHidden"/>
+        <activity android:name="org.raz.pdb.graphics.SearcherTab" android:configChanges="orientation|keyboardHidden"/>
+        <activity android:name="org.raz.pdb.graphics.FileBrowser" android:configChanges="orientation|keyboardHidden"/>        
+    </application>
+
+</manifest>
